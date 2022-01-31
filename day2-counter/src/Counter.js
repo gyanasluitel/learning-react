@@ -18,13 +18,13 @@ class Counter extends Component {
   };
 
   handleDecrease = () => {
-    this.setState((prevState) => {
-      if (prevState.count > 0) {
+    if (this.state.count > 0) {
+      this.setState((prevState) => {
         return {
           count: prevState.count - 1,
         };
-      }
-    });
+      });
+    }
   };
 
   render() {
